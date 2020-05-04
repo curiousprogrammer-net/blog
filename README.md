@@ -1,2 +1,3 @@
-# curious-programmer-blog
-Additional resource for curiousprogrammer.net blog
+# curiousprogrammer.net blog
+
+Blog's content and additional resources.

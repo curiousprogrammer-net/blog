@@ -1,28 +1,40 @@
-# Weekly Bits & Pieces 01/2020
+# Weekly Bits & Pieces 01/2020 (27.4. - 3.5.)
 
 _This is the very first weekly summary published on my blog. 
 It reviews interesting stuff I did and found in the past week_.
 
-<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
-**Table of Contents**
+  <!-- markdown-toc start
+       THIS HAS BEEN MANUALLY GENERATED!
+       It doesn't work in Wordpress if you just use markdown style table of contents
+       -->
+  <p><strong>Table of Contents</strong></p>
 
-- [Clojure](#clojure)
-- [Learning](#learning)
-    - [Rapid Learner](#rapid-learner)
-- [Reading](#reading)
-- [Writing](#writing)
-- [Personal (Hobbies)](#personal-hobbies)
-- [Projects Update](#projects-update)
-    - [Python for Data Science](#python-for-data-science)
-    - [SICP](#sicp)
-    - [Computer Systems](#computer-systems)
-- [Work (CodeScene)](#work-codescene)
-    - [CodeScene 4.0](#codescene-40)
-    - [JVM crash and slow analyses](#jvm-crash-and-slow-analyses)
-       - [Windows Server - Linux VM and JVM bug](#windows-server---linux-vm-and-jvm-bug)
-       - [Windows Server - Tomcat and small heap size](#windows-server---tomcat-and-small-heap-size)
-       - [Azure Containers - (really) slow IO](#azure-containers---really-slow-io)
-
+  <ul>
+    <li><a href="#clojure">Clojure</a></li>
+    <li><a href="#learning">Learning</a>
+      <ul>
+        <li><a href="#rapid-learner">Rapid Learner</a></li>
+      </ul></li>
+    <li><a href="#reading">Reading</a></li>
+    <li><a href="#writing">Writing</a></li>
+    <li><a href="#personal-hobbies">Personal (Hobbies)</a></li>
+    <li><a href="#projects-update">Projects Update</a>
+      <ul>
+        <li><a href="#python-for-data-science">Python for Data Science</a></li>
+        <li><a href="#sicp">SICP</a></li>
+        <li><a href="#computer-systems">Computer Systems</a></li>
+      </ul></li>
+    <li><a href="#work-codescene">Work (CodeScene)</a>
+      <ul>
+        <li><a href="#codescene-40">CodeScene 4.0</a></li>
+        <li><a href="#jvm-crash-and-slow-analyses">JVM crash and slow analyses</a>
+          <ul>
+            <li><a href="#windows-server---linux-vm-and-jvm-bug">Windows Server - Linux VM and JVM bug</a></li>
+            <li><a href="#windows-server---tomcat-and-small-heap-size">Windows Server - Tomcat and small heap size</a></li>
+            <li><a href="#azure-containers---really-slow-io">Azure Containers - (really) slow IO</a></li>
+          </ul></li>
+      </ul></li>
+  </ul>
 <!-- markdown-toc end -->
 
 

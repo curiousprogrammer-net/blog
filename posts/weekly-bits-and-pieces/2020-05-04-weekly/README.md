@@ -192,8 +192,8 @@ Wall time: 22.8 ms
 ```
 * _Random Walk_ example in section 4.7 was pretty interesting - I don't think I ever heard
   about _first crossing time_ value:
-  - ![Random Walk using plain python](2020-05-04-ds-random-walk-python.png)
-  - ![Random Walk using NumPy](2020-05-04-ds-random-walk-numpy.png)
+  - ![Random Walk using plain python](ds-random-walk-python.png)
+  - ![Random Walk using NumPy](ds-random-walk-numpy.png)
 
 <div id="sicp"></div>
 
@@ -237,9 +237,9 @@ objdump -d prog
 I've also found a striking connection to the Huffman Encoding section in SICP - x86 assembly
 is really a _prefix code_!
   - Diassembled object code: `objdump -d mstore.o`  
-  ![Disassemble object code](2020-05-04-cs-objdump-object-code.png)
+  ![Disassemble object code](cs-objdump-object-code.png)
   - Disassembled executable: `objdump -d prog`  
-  ![Disassemble object code](2020-05-04-cs-objdump-executable.png)
+  ![Disassemble object code](cs-objdump-executable.png)
 
 
 You can find my book code examples here: <https://github.com/jumarko/computer-systems>
@@ -296,7 +296,7 @@ and deploying CodeScene with Azure Containers
 #### Windows Server - Linux VM and JVM bug
 
 First, they tried to run CodeScene using our docker image and hit a JVM bug right from the start:
-![SIGILL JVM error](2020-05-04-codescene-avx-bug.png)
+![SIGILL JVM error](codescene-avx-bug.png)
 
 As my colleague found, this was due to incorrect detection of AVX instruction family support 
 (vectorized processor instructions) in the JVM.
@@ -310,11 +310,11 @@ docker run -e JAVA_OPTIONS=-XX:UseAVX=0 empear/ubuntu-onprem:latest
 
 The AVX instruction support can be verified (on Linux) via `lscpu` - just check the `FLags` section
 if there's 'avx' or not:
-![lscpu - missing AVX flag](2020-05-04-codescene-avx-bug-lscpu.png)
+![lscpu - missing AVX flag](codescene-avx-bug-lscpu.png)
 
 As we later found, the AVX instruction wasn't supported due to "Compatibility Configuration"
 on the Windows Server host which allowed the VMs to be easily migrated between physical hosts:
-![Windows Server - VM compability configuration](2020-05-04-codescene-avx-bug-vm-compatibility.png)
+![Windows Server - VM compability configuration](codescene-avx-bug-vm-compatibility.png)
 
 The customer ended up using Tomcat installed directly on the Host Windows OS, 
 but it was a really tricky support case anyway.
@@ -332,7 +332,7 @@ Eventually, we found the root cause: **small _default_ heap** size set by Tomcat
 although the machine had 32 GB of ram, the default Max heap size set by Tomcat Windows installer
 was only about ~250 MB.
 After raising the max heap size manually to 12 GB the analysis finished within a hour (they have a huge repository):
-![Tomcat on Windows - heap settings](2020-05-04-codescene-windows-tomcat-heap-settings.png)
+![Tomcat on Windows - heap settings](codescene-windows-tomcat-heap-settings.png)
 
 <div id="azure-containers---really-slow-io"></div>
 
